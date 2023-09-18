@@ -1,0 +1,47 @@
+Algorithm read a sentence
+
+VAR
+
+   nbv,nbw,nbc:= INTEGER ;
+
+   sentc:= STRING[] ;
+
+Begin
+
+  nbc:= 0 ;
+
+  nbw:= 1 ;
+
+  nbv:= 0;
+
+  write("type the sentence")
+
+  read(sentc)
+
+REPEAT
+
+   
+
+   IF (sentc[nbc]=" ") THEN
+
+       nbw:=nbw+1 ;
+
+   END_IF
+
+  IF (sentc[nbc] in ["a","e","u","i","o","y"]) THEN
+
+   nbv:= nbv +1 ;
+
+   END_IF
+
+   nbc := nbc+1 ;
+
+UNTIL (sentc[nbc]=".")
+
+write( "number of caractere ",nbc+1 )
+
+write (" number of words ",nbw)
+
+write (" number of vowels ",nbv)
+
+END
